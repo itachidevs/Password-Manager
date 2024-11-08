@@ -1,0 +1,87 @@
+.passwords-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.password-card {
+  background-color: transparent;
+  padding: 1rem;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Roboto';
+  gap: 1rem;
+
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 0.2rem;
+  border: 0.12rem solid var(--border);
+}
+.cementblue {
+  background-color: var(--cementblue);
+}
+.yelloworange {
+  background-color: var(--yelloworange);
+}
+.darkorange {
+  background-color: var(--darkorange);
+}
+.pale {
+  background-color: var(--pale);
+}
+.skypales {
+  background-color: var(--skypales);
+}
+.brown {
+  background-color: var(--brown);
+}
+.darkblue {
+  background-color: chartreuse--darkblue;
+}
+.darkcement {
+  background-color: var(--darkcement);
+}
+.white {
+  background-color: var(--white);
+  color: black;
+}
+.profile {
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--white);
+  text-align: center;
+  align-content: center;
+}
+.description {
+  width: auto;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+.delete-icon-container {
+  width: 70px;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+}
+.delete-icon {
+  width: 1rem;
+}
+.stars {
+  width: 40%;
+}

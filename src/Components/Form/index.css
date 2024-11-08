@@ -1,0 +1,73 @@
+.top-container {
+  background-color: var(--cardbg);
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+}
+.form-image {
+  width: 50%;
+}
+.form-container {
+  width: auto;
+  height: auto;
+  background-color: var(--inputText);
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+.form-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: var(--textcolor);
+  margin-bottom: 1rem;
+}
+.input-container {
+  width: 90%;
+  background-color: var(--textcolor);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  color: var(--inputText);
+}
+.icon-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+.input-icon {
+  width: 80%;
+}
+.input {
+  width: 80%;
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 0.2rem solid var(--border);
+  border-right: none;
+  padding: 0.3rem;
+  color: var(--inputText);
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.btn {
+  width: 3rem;
+  height: 2rem;
+  background: var(--buttonbg);
+  color: var(--white);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: 400;
+  border-width: 0rem;
+  border-radius: 0.3rem;
+  float: right;
+}
