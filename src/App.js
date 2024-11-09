@@ -4,9 +4,9 @@ import {Component} from 'react'
 
 import {v4 as uuidv4} from 'uuid'
 
-import Form from './Components/Form'
+// import Form from './Components/Form'
 
-import PasswordCard from './Components/password'
+import PasswordCard from './Components/password/index'
 
 import './App.css'
 
@@ -35,17 +35,19 @@ class App extends Component {
   addPassword = event => {
     event.preventDefault()
     const {website, username, password} = this.state
-    const nwePassword = {
-      id: uuidv4(),
-      website,
-      password,
-      username,
-    }
+    if (website !== '' || username !== '' || password !== '') {
+      const nwePassword = {
+        id: uuidv4(),
+        website,
+        password,
+        username,
+      }
 
-    this.setState(previous => ({
-      passwords: [...previous.passwords, nwePassword],
-    }))
-    this.setState({website: '', password: '', username: ''})
+      this.setState(previous => ({
+        passwords: [...previous.passwords, nwePassword],
+      }))
+      this.setState({website: '', password: '', username: ''})
+    }
   }
 
   isCheckboxChecked = () => {
@@ -58,13 +60,18 @@ class App extends Component {
     return (
       <div className="top-container">
         <img
-          className="form-image"
+          className="form-image-sm"
           alt="password manager"
           src="https://assets.ccbp.in/frontend/react-js/password-manager-sm-img.png"
         />
+        <img
+          className="form-image-lg"
+          alt="password manager"
+          src="https://assets.ccbp.in/frontend/react-js/password-manager-lg-img.png"
+        />
         <div className="form-container">
           <h1 className="form-heading">Add New Password</h1>
-          <form className="form">
+          <form className="form" onClick={this.preventing}>
             <div className="input-container">
               <div className="icon-container">
                 <img
@@ -80,6 +87,8 @@ class App extends Component {
                 onChange={this.updateInputWebsite}
                 value={website}
                 required
+                min="1"
+                max="10"
               />
             </div>
             <div className="input-container">
@@ -97,6 +106,8 @@ class App extends Component {
                 onChange={this.updateInputUsername}
                 value={username}
                 required
+                min="1"
+                max="10"
               />
             </div>
             <div className="input-container">
@@ -114,6 +125,8 @@ class App extends Component {
                 onChange={this.updateInputPassword}
                 value={password}
                 required
+                min="1"
+                max="16"
               />
             </div>
 
