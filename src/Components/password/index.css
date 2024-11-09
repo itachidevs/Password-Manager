@@ -14,12 +14,16 @@
   padding: 1rem;
   color: white;
   width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 50px;
+  max-height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-family: 'Roboto';
   gap: 1rem;
-
+  overflow: auto;
   font-size: 1rem;
   font-weight: 300;
   border-radius: 0.2rem;
@@ -44,7 +48,7 @@
   background-color: var(--brown);
 }
 .darkblue {
-  background-color: chartreuse--darkblue;
+  background-color: var(--darkblue);
 }
 .darkcement {
   background-color: var(--darkcement);
@@ -63,11 +67,13 @@
   color: var(--white);
   text-align: center;
   align-content: center;
+  background-color: var(--cementblue);
 }
 .description {
   width: auto;
   height: 100%;
   text-align: center;
+  word-wrap: break-word;
   align-content: center;
 }
 .delete-icon-container {

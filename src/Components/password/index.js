@@ -30,33 +30,33 @@ const PasswordCard = props => {
   const {website, username, password, id} = details
 
   return (
-    <li className='password-card'>
-      <div className={`profile ${classname}`}>
+    <li className="password-card">
+      <div className="prifile">
         <p>{website[0]}</p>
       </div>
-      <div className='description'>
+      <div className="description">
         <p>{website}</p>
         <p>{username}</p>
         {isChecked ? (
           <p>{password}</p>
         ) : (
           <img
-            className='stars'
-            alt='stars'
-            src='https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png'
+            className="stars"
+            alt="stars"
+            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
           />
         )}
       </div>
       <button
-        className='delete-icon-container'
-        type='button'
-        onClick={onDeletePassword}
-        data-testid='delete'
+        className="delete-icon-container"
+        type="button"
+        onClick={() => onDeletePassword(id)}
+        data-testid="delete"
       >
         <img
-          src='https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png'
-          alt='delete'
-          className='delete-icon'
+          src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
+          alt="delete"
+          className="delete-icon"
         />
       </button>
     </li>
